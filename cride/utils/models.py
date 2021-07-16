@@ -23,4 +23,4 @@ class CRideModel(models.Model):
 		"""Meta options"""
 		abstract = True
 		get_latest_by = 'created'
-		ordering = ['-created', '-modifed']
+		ordering = ['-created', '-modified']

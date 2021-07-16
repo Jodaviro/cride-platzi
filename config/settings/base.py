@@ -11,7 +11,7 @@ env = environ.Env()
 DEBUG = env.bool('DJANGO_DEBUG', False)
 
 # Language and timezone
-TIME_ZONE = 'America/Mexico_City'
+TIME_ZONE = 'Europe/Madrid'
 LANGUAGE_CODE = 'en-us'
 SITE_ID = 1
 USE_I18N = True
@@ -44,9 +44,11 @@ DJANGO_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
+    'rest_framework'
 ]
 LOCAL_APPS = [
     'cride.users.apps.UsersAppConfig',
+    'cride.circles.apps.CircleAppConfig',
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
