@@ -2,15 +2,15 @@
 
 #django
 from django.db import models
-from django.contrib.auth.models import BaseUserManager, AbstractUser
+from django.contrib.auth.models import AbstractUser
 from django.core.validators import RegexValidator
 
 #Utilities
 from cride.utils.models import CRideModel
 
 class User(CRideModel, AbstractUser):
-	"""
-	Custom User Model. 
+	"""Custom User Model. 
+	
 	Extends from django AbstractBaseUser, change the username field
 	to email field and add some extra fields.
 	"""
