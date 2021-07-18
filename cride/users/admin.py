@@ -26,6 +26,9 @@ class CustomUserAdmin(UserAdmin):
 	inlines = (ProfileInLine,)
 	list_display = ('email', 'username', 'first_name', 'last_name', 'is_staff', 'is_client', 'is_verified')
 	list_filter = ('is_client', 'is_staff', 'created', 'modified',)
+	field_options={
+		'fields': ('phone_number',),
+	}
 
 admin.site.register(User, CustomUserAdmin)
 

@@ -38,8 +38,6 @@ class User(CRideModel, AbstractUser):
 			'Set to True when the user have verified its email'
 		),
 	)
-	first_name = models.CharField(('first name'), max_length=150, blank=True)
-	last_name = models.CharField(('last name'), max_length=150, blank=True)
 	phone_rexex = RegexValidator(
 		regex=r'\+?1?\d{9,15}$',
 		message='Phone number must entered be entered in format: +9999999999. Up to 15 digits allowed'
